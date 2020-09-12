@@ -1,16 +1,12 @@
-import './index.css'
-import ReactDom from 'react-dom'
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Root from './pages/Root';
+import * as serviceWorker from './serviceWorker';
 
-import Primeiro from './components/basicos/Primeiro'
+ReactDOM.render(<Root />, document.getElementById('root'));
 
-import Segundo from './components/basicos/Primeiro'
-
-const tag = <strong>Olá React!</strong>
-
-ReactDom.render(
-    <div>
-       <Primeiro>Ola</Primeiro>
-    </div>,
-    document.getElementById('root')
-)
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
