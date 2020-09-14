@@ -7,11 +7,17 @@ import {
 import Home from './Home/Home';
 import Login from './Login/Login';
 
+
+
+
+
 const PagesRoot = () => (
-  <Router>
+  <Router> 
     <Switch>
-      <Route path="/login" component={Login} />
-      <Route path="/home" component={Home} />
+      <Route path="/login" component={Login} exact path="/login"/>
+      <Route path="/home" component={Home} exact path="/home/"/>
+      
+      
     </Switch>
   </Router>
 )
