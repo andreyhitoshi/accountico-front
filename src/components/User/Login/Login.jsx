@@ -7,8 +7,6 @@ import calculadora from "../../images/calculadora.jpg"
 
 import './Login.css';
 
-
-
 const UserLogin = () => {
   return (
     <div className="user-login">
@@ -27,13 +25,6 @@ const UserLogin = () => {
         <div className="user-login__form-control">
           <label htmlFor="password">Senha:</label>
           <input id="password" type="password" name="password" />
-
-  
-
-
-
-
-
         </div>
         <UIButton
           type="submit"
@@ -47,10 +38,6 @@ const UserLogin = () => {
     </div>
   );
 }
-
-
-
-
 export default UserLogin;
 
 

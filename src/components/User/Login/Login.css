@@ -4,16 +4,11 @@
   height: 100%;
   padding:0px;
   box-sizing: border-box 2px;
-
 }
 
 .user-login__title {
   flex-direction: center;
   margin-bottom: 10px;
-  
-  
-  
- 
 }
 
 .user-login__form-control {

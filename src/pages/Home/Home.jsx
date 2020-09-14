@@ -3,7 +3,6 @@ import './Home.css';
 
 const PagesHome = () => (
   <div className="pages-home">
-    
     <br />
     <button type="button">Sair</button>
   </div>
