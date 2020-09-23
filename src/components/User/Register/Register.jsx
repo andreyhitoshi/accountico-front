@@ -3,9 +3,10 @@ import React from 'react'
 import { ErrorMessage, Formik, Form, Field } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
+import UIButton from 'components/UI/Button/Button'
 // import { history } from '../../history'
 
-import '../login/Login.css'
+import './Register.css'
 
 const PagesRegister = () => {
     const handleSubmit = values => {
@@ -24,8 +25,9 @@ const PagesRegister = () => {
     })
     return (
         <>
-            <h1>Register</h1>
-            <p>Fill the fields to create a new user</p>
+            <h1>Cadastro de clientes</h1>
+            
+           
             <Formik
                 initialValues={{}}
                 onSubmit={handleSubmit}
@@ -33,10 +35,13 @@ const PagesRegister = () => {
             >
                 <Form className="Login">
                     <div className="Login-Group">
+                    <label htmlFor="name">Nome: </label>
                         <Field
-                            name="firstName"
+                            name="Nome: "
                             className="Login-Field"
+                        
                         />
+                        
                         <ErrorMessage
                             component="span"
                             name="firstName"
@@ -44,30 +49,42 @@ const PagesRegister = () => {
                         />
                     </div>
                     <div className="Login-Group">
-                        <Field
-                            name="lastName"
-                            className="Login-Field"
+                    <label htmlFor="Sobrenome">Sobrenome: </label>
+                        
+                            <Field
+                                
+                                name="Sobrenome: "
+                                className="Login-Field-Sobrenome"
+                                
+                           
+                            
                         />
+                        
+                   
+                        
                         <ErrorMessage
                             component="span"
                             name="lastName"
                             className="Login-Error"
+                            
                         />
                     </div>
                     <div className="Login-Group">
+                    <label htmlFor="name">*E-mail:  </label>
                         <Field
-                            name="email"
+                            name="email: "
                             className="Login-Field"
                         />
                         <ErrorMessage
                             component="span"
-                            name="email"
+                            name="E-mail"
                             className="Login-Error"
                         />
                     </div>
                     <div className="Login-Group">
+                    <label htmlFor="Senha">*Senha:  </label>
                         <Field
-                            name="password"
+                            name="Senha:"
                             className="Login-Field"
                         />
                         <ErrorMessage
@@ -76,7 +93,8 @@ const PagesRegister = () => {
                             className="Login-Error"
                         />
                     </div>
-                    <button className="Login-Btn" type="submit">Register</button>
+                    {/* <UIButton>Cadastrar</UIButton> */}
+                    <button className="Button-Register" type="submit">REGISTRAR</button>
                 </Form>
             </Formik>
         </>

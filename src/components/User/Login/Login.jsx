@@ -3,8 +3,6 @@ import React from 'react';
 import UIButton from 'components/UI/Button/Button';
 import AccounticoLogo from "../../images/accounticoLogo.jpg"
 import calculadora from "../../images/calculadora.jpg"
-
-
 import './Login.css';
 
 const UserLogin = () => {

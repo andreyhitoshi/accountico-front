@@ -37,7 +37,7 @@
   right: -190px;
   position:relative;
   border-radius: 10px;
-  border: 1px solid #6719E7;
+  border: 1px solid #435eb1;
   height: 20px;
   padding: 20px 10px;
   padding-right: 60px;
@@ -51,21 +51,17 @@
   padding: 10px 90px;
   color: #ffffff;
   bottom: 90px;
-  background:#9287bb;
+  background:#435eb1;
   border-radius: 20px;
-  transition: background-color 0.5s;
-  
- 
-  
-
- 
+  transform-style: #641c6c;
+  transition: background-color  0.5s;
 }
 
 .logo {
   position:fixed;
   margin-left:250px;
-  width: 360px;
-  height: 283px;
+  width: 365px;
+  height: 288px;
   
 }
 
