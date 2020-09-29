@@ -1,4 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/alt-text */
+
+  
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import UIButton from 'components/UI/Button/Button';
 import AccounticoLogo from "../../images/accounticoLogo.jpg"
@@ -37,6 +41,12 @@ const UserLogin = () => {
   );
 }
 export default UserLogin;
+
+
+
+
+
+
 
 
 
