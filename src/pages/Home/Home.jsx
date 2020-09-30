@@ -1,11 +1,8 @@
 import React from 'react';
-import './Home.css';
+import PageHome from 'components/User/Home/Home';
 
 const PagesHome = () => (
-  <div className="pages-home">
-    <br />
-    <button type="button">Sair</button>
-  </div>
+  <PageHome />
 );
 
 export default PagesHome;
