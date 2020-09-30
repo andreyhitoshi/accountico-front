@@ -11,10 +11,9 @@ h1 {
 }
 
 
-
 .Login-Group {
     padding-left:500px;
-    padding-bottom:10px;
+    padding: bottom 5px;
     padding-top:50px;
 
 }
@@ -22,18 +21,19 @@ h1 {
 
 .Login-Field{
   right:5px;
-  left:14px;
+  left:5px;
   position:relative;
   border-radius: 10px;
   border: 1px solid #435eb1;
   height: 20px;
   padding: 15px 10px;
-  padding-right:41px;
+  padding-right:10px;
 
 }
 
 
 .Login-Field-Sobrenome{
+  
   right: -5px;
   position:relative;
   border-radius: 10px;
@@ -47,11 +47,11 @@ h1 {
 
 .Button-Register{
     position:fixed;
-    left: 550px;
+    left: 600px;
     font-family: sans-serif;
-    padding: 10px 90px;
+    padding: 10px 50px;
     color: #ffffff;
-    bottom: 90px;
+    bottom: 50px;
     background:#435eb1;
     border-radius: 20px;
     transform-style: #641c6c;
