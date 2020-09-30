@@ -6,12 +6,15 @@ import {
 } from 'react-router-dom';
 import Home from './Home/Home';
 import Login from './Login/Login';
+import Register from '../components/User/Register/Register'
+
 
 const PagesRoot = () => (
-  <Router>
+  <Router> 
     <Switch>
-      <Route path="/login" component={Login} />
-      <Route path="/home" component={Home} />
+      <Route path="/login" component={Login} exact path="/login"/>
+      <Route path="/home" component={Home} exact path="/home/"/>
+      <Route path="/register" component={Register} exact path="/register/"/>
     </Switch>
   </Router>
 )
