@@ -25,7 +25,7 @@ const PagesRegister = () => {
     })
     return (
         <>
-            <h1>Cadastro de clientes</h1>
+            <h1>Cadastro de Clientes</h1>
             
            
             <Formik
@@ -49,7 +49,7 @@ const PagesRegister = () => {
                         />
                     </div>
                     <div className="Login-Group">
-                    <label htmlFor="Sobrenome">Sobrenome: </label>
+                    <label htmlFor="Sobrenome">Sobrenome:  </label>
                         
                             <Field
                                 
