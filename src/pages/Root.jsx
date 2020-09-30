@@ -8,7 +8,6 @@ import Home from './Home/Home';
 import Login from './Login/Login';
 import Register from '../components/User/Register/Register'
 
-
 const PagesRoot = () => (
   <Router> 
     <Switch>
@@ -18,6 +17,5 @@ const PagesRoot = () => (
     </Switch>
   </Router>
 )
-
 
 export default PagesRoot;
