@@ -1,103 +1,53 @@
 import React from 'react'
-
-import { ErrorMessage, Formik, Form, Field } from 'formik'
-import * as yup from 'yup'
 import axios from 'axios'
-import UIButton from 'components/UI/Button/Button'
-// import { history } from '../../history'
-
+import {Link} from 'react-router-dom';
+import {FiArrowLeft} from 'react-icons/fi';
+import logoImage from "../../images/accounticoLogo.jpg"
 import './Register.css'
 
 const PagesRegister = () => {
-    const handleSubmit = values => {
-        axios.post('http://localhost:8080/v1/api/user', values)
-            .then(resp => {
-                const { data } = resp
-                if (data) {
-                    // history.push('/login')
-                }
-            })
-    }
-
-    const validations = yup.object().shape({
-        email: yup.string().email().required(),
-        password: yup.string().min(8).required()
+  const handleSubmit = values => {
+    axios.post('http://localhost:8080/v1/api/user', values)
+         .then(resp => {
+           const { data } = resp
+             if (data) {}
     })
-    return (
-        <>
-            <h1>Cadastro de Clientes</h1>
-            
-           
-            <Formik
-                initialValues={{}}
-                onSubmit={handleSubmit}
-                validationSchema={validations}
-            >
-                <Form className="Login">
-                    <div className="Login-Group">
-                    <label htmlFor="name">Nome: </label>
-                        <Field
-                            name="Nome: "
-                            className="Login-Field"
-                        
-                        />
-                        
-                        <ErrorMessage
-                            component="span"
-                            name="firstName"
-                            className="Login-Error"
-                        />
-                    </div>
-                    <div className="Login-Group">
-                    <label htmlFor="Sobrenome">Sobrenome:  </label>
-                        
-                            <Field
-                                
-                                name="Sobrenome: "
-                                className="Login-Field-Sobrenome"
-                                
-                           
-                            
-                        />
-                        
-                   
-                        
-                        <ErrorMessage
-                            component="span"
-                            name="lastName"
-                            className="Login-Error"
-                            
-                        />
-                    </div>
-                    <div className="Login-Group">
-                    <label htmlFor="name">*E-mail:  </label>
-                        <Field
-                            name="email: "
-                            className="Login-Field"
-                        />
-                        <ErrorMessage
-                            component="span"
-                            name="E-mail"
-                            className="Login-Error"
-                        />
-                    </div>
-                    <div className="Login-Group">
-                    <label htmlFor="Senha">*Senha:  </label>
-                        <Field
-                            name="Senha:"
-                            className="Login-Field"
-                        />
-                        <ErrorMessage
-                            component="span"
-                            name="password"
-                            className="Login-Error"
-                        />
-                    </div>
-                    {/* <UIButton>Cadastrar</UIButton> */}
-                    <button className="Button-Register" type="submit">REGISTRAR</button>
-                </Form>
-            </Formik>
-        </>
-    )
+  }
+
+  return (
+    <div className='register-container'>
+        <div className="content">
+            <section>
+                <a href="/">
+                    <img src={logoImage} alt="Accountico"/>
+                </a>
+
+                <h1>Cadastro</h1>
+                <p>Entre na plataforme e tenha uma melhor gestão financeira!</p>
+
+                <Link className='back-link' to='/login'>
+                    <FiArrowLeft size={16} color='#6376BD'/>
+                    Voltar para o login
+                </Link>
+            </section>
+
+            <form action={handleSubmit}>
+              <input
+                placeholder='Nome'
+              />
+              <input
+                placeholder='Sobrenome'
+              />
+              <input
+                type='email'
+                placeholder='E-mail'
+              />
+              <input
+                placeholder='Senha'
+              />
+            </form>
+        </div>
+    </div>
+  )
 }
 export default PagesRegister;
