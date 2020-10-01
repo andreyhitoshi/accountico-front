@@ -6,3 +6,4 @@ const PagesHome = () => (
 );
 
 export default PagesHome;
+
